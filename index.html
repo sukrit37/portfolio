@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sukrit Sharma | CSAI @ Plaksha · ML · Entrepreneur</title>
+  <meta name="description" content="Portfolio of Sukrit Sharma — B.Tech CSAI student at Plaksha University. ML Engineer, Entrepreneur, and Researcher building at the intersection of AI and impact." />
+  <meta property="og:title" content="Sukrit Sharma | Portfolio" />
+  <meta property="og:description" content="ML Engineer · Entrepreneur · Researcher" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">S<span>.</span>SHARMA</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about"      class="nav-link">About</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li><a href="#projects"   class="nav-link">Projects</a></li>
+    <li><a href="#working-on" class="nav-link">Current</a></li>
+    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+    <li><a href="#contact"    class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO — Cyber Rain
+══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="cyber-rain-canvas"></canvas>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <!-- ASCII Crescent Moon -->
+    <pre class="hero-ascii" aria-hidden="true">
+  *    .       *    .    *   .       *    .    *   .
+    .    *   .    *   .     *    .    *   .    *   
+  .   *   .    *    .   *    .    *    .    *    .  
+            .           *           .          *    
+  *    .        ██████      .    *        .         
+    .       ████░░░░░░██        .      *    .       
+  .      ███░░░░░░░░░░░░█     *     .       *    .  
+       ███░░░░░░░░░░░░░░░██       *      .          
+  *   ██░░░░░░░░░░░░░░░░░░██  .      *       .   *  
+    ███░░░░░░░░░░░░░░░░░░░░██     .      *          
+  . ██░░░░░░░░░░░░░░░░░░░░░██  *     .       *   .  
+    ███░░░░░░░░░░░░░░░░░░░░██     .       *         
+  *  ██░░░░░░░░░░░░░░░░░░░██   .     *       .   *  
+    . ███░░░░░░░░░░░░░░░░██  *     .       *        
+  .     ████░░░░░░░░░░░███     .       *     .   *  
+    *      ██████░░░░███    .       *      .         
+  .    *      ████████    *     .       *     .   .  
+    .    *   .    *   .     *    .    *   .    *   </pre>
+
+    <p class="hero-greeting">// Hello, World! I'm</p>
+    <h1 class="hero-name">
+      <span class="first">SUKRIT&nbsp;</span><span class="last">SHARMA</span>
+    </h1>
+    <p class="hero-tagline">
+      B.Tech CSAI @ <span class="highlight">Plaksha University</span>&nbsp;·&nbsp;
+      ML Engineer&nbsp;·&nbsp;
+      <span class="highlight">Entrepreneur</span>&nbsp;·&nbsp;
+      Researcher
+    </p>
+    <div class="hero-cta">
+      <a href="#projects"   class="btn btn-primary">  &gt; View Projects</a>
+      <a href="#contact"    class="btn btn-secondary">  &gt; Contact Me</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════ -->
+<div class="neon-divider"></div>
+<section id="about">
+  <div class="section-container">
+    <h2 class="section-title reveal">ABOUT</h2>
+    <p class="section-subtitle reveal">// who_am_i.py</p>
+
+    <div class="about-grid">
+
+      <!-- Terminal Block -->
+      <div class="about-terminal glass-card reveal">
+        <div class="terminal-header">
+          <div class="terminal-dot dot-red"></div>
+          <div class="terminal-dot dot-yellow"></div>
+          <div class="terminal-dot dot-green"></div>
+          <span class="terminal-title">sukrit@plaksha ~ bash</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">❯</span> <span class="cmd">cat profile.json</span></p>
+          <p class="output">{</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"name"</span>: <span class="val">"Sukrit Sharma"</span>,</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"degree"</span>: <span class="val">"B.Tech CSAI"</span>,</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"university"</span>: <span class="val">"Plaksha University"</span>,</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"cgpa"</span>: <span class="val">8.34</span>,</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"grad_year"</span>: <span class="val">2028</span>,</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"focus"</span>: [</p>
+          <p class="output">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Machine Learning"</span>,</p>
+          <p class="output">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Computer Vision"</span>,</p>
+          <p class="output">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Agentic AI"</span>,</p>
+          <p class="output">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Entrepreneurship"</span></p>
+          <p class="output">&nbsp;&nbsp;],</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"location"</span>: <span class="val">"Mohali, India"</span>,</p>
+          <p class="output">&nbsp;&nbsp;<span class="key">"open_to"</span>: <span class="val">"Research · Internships · Collab"</span></p>
+          <p class="output">}</p>
+          <br>
+          <p><span class="prompt">❯</span> <span class="cmd typewriter" id="typewriter-cmd">_</span></p>
+        </div>
+      </div>
+
+      <!-- Bio + Skills -->
+      <div class="about-bio reveal">
+        <h3>// Building at the Intersection of AI &amp; Impact</h3>
+        <p>
+          I'm a second-year CS+AI student at Plaksha University, passionate about building
+          intelligent systems that solve real-world problems. From computer vision pipelines
+          for surgical robotics to building a software marketplace, I thrive at the junction
+          of research and execution.
+        </p>
+        <p>
+          Currently interning at <strong>NITI Aayog</strong>, shaping national innovation policy,
+          and building <strong>Nexus</strong> — a marketplace for software products.
+        </p>
+
+        <div class="skills-grid">
+          <span class="skill-badge green">Python</span>
+          <span class="skill-badge green">C/C++</span>
+          <span class="skill-badge green">JavaScript</span>
+          <span class="skill-badge green">LaTeX</span>
+          <span class="skill-badge green">Linux</span>
+          <span class="skill-badge cyan">LLMs</span>
+          <span class="skill-badge cyan">MCP</span>
+          <span class="skill-badge cyan">CrewAI</span>
+          <span class="skill-badge cyan">AWS</span>
+          <span class="skill-badge cyan">Flask</span>
+          <span class="skill-badge cyan">Nginx</span>
+          <span class="skill-badge pink">YOLOv11</span>
+          <span class="skill-badge pink">MedSAM-2</span>
+          <span class="skill-badge pink">RT-DETR</span>
+          <span class="skill-badge pink">Scikit-learn</span>
+          <span class="skill-badge pink">CVAT</span>
+        </div>
+
+        <!-- Education -->
+        <div class="edu-block">
+          <div class="edu-item">
+            <div>
+              <div class="edu-name">B.Tech Computer Science &amp; AI</div>
+              <div class="edu-inst">Plaksha University, Mohali</div>
+            </div>
+            <div class="edu-grade">8.34 · 2028</div>
+          </div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-name">Class XII — CBSE</div>
+              <div class="edu-inst">Sanskriti School, New Delhi</div>
+            </div>
+            <div class="edu-grade">93.8%</div>
+          </div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-name">Class X — CBSE</div>
+              <div class="edu-inst">Sanskriti School, New Delhi</div>
+            </div>
+            <div class="edu-grade">92.7%</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ASCII Art Divider -->
+<div class="ascii-section">
+  <pre class="ascii-art-block" aria-hidden="true">─────────────────────────────────────────── [ SYSTEM ONLINE ] ─────────────────────────────────────────────</pre>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════════════════════════ -->
+<div class="neon-divider"></div>
+<section id="experience">
+  <div class="section-container">
+    <h2 class="section-title reveal">EXPERIENCE</h2>
+    <p class="section-subtitle reveal">// career_track.log — select a track</p>
+
+    <div class="exp-tabs reveal">
+      <button class="tab-btn active" data-tab="technical">⌨ Technical</button>
+      <button class="tab-btn" data-tab="consulting">◈ Consulting</button>
+      <button class="tab-btn" data-tab="research">⚗ Research</button>
+      <button class="tab-btn" data-tab="entrepreneurship">◆ Entrepreneurship</button>
+    </div>
+
+    <!-- Technical -->
+    <div class="tab-panel active" id="tab-technical">
+
+      <div class="exp-card glass-card reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">ML Intern</div>
+            <div class="exp-company">Dixon IoT Lab · Prof. Srikant Srinivasan (Dean of Academics)</div>
+          </div>
+          <div class="exp-date">Dec 2025 – Jan 2026</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led data cleaning &amp; preprocessing pipelines for a computer vision project under the mentorship of the Dean of Academics.</li>
+          <li>Managed automated and manual annotation workflows for road traffic datasets, ensuring high data fidelity.</li>
+          <li>Annotated 3000+ frames and developed models for segmentation tasks.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card glass-card cyan reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">ML Intern</div>
+            <div class="exp-company">Whilter AI</div>
+          </div>
+          <div class="exp-date">May 2025 – Jun 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed and trained agentic AI models; utilized GridSearchCV to tune hyperparameters and optimize performance.</li>
+          <li>Structured scalable data pipelines, demonstrating the ability to organize and process complex information systematically.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card glass-card pink reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Graphic Design Intern</div>
+            <div class="exp-company">Jan Shikshan Sansthan (JSS)</div>
+          </div>
+          <div class="exp-date">May 2025 – Jun 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Played a pivotal role in data handling on the Skill India Digital Portal, ensuring eligibility compliance.</li>
+          <li>Developed graphic content for stakeholder updates regarding Plantation Drives and Swachta Pakhwada.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Consulting -->
+    <div class="tab-panel" id="tab-consulting">
+      <div class="exp-card glass-card cyan reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Horizontal Subject Matter Expert Intern</div>
+            <div class="exp-company">NITI Aayog — Atal Innovation Mission 2.0</div>
+          </div>
+          <div class="exp-date">Jun 2026 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Jointly developed the Atal Acceleration Centre for Scaleup of Startups programme under AIM 2.0.</li>
+          <li>Developed the National Incubator Assessment Framework in collaboration with DST, DBT, DPIIT, MEITY, and the World Bank.</li>
+          <li>Contributed to national-level startup ecosystem policy shaping at India's premier public policy think-tank.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Research -->
+    <div class="tab-panel" id="tab-research">
+
+      <div class="exp-card glass-card reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">IVT Triplet Recognition Research</div>
+            <div class="exp-company">Prof. Sandeep Manjanna — Plaksha University</div>
+          </div>
+          <div class="exp-date">Nov 2025 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Engineered a 15-class target segmentation dataset utilizing a YOLO-to-MedSAM-2 pipeline with dynamic prompt jittering and geometric augmentation.</li>
+          <li>Validated a Gaussian-guided spatial attention mechanism on instrument bounding boxes, achieving +7.9% Instrument mAP and a +21.5% relative boost in Triplet mAP over baseline CAMs.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card glass-card cyan reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">CADSIT Headgear Detection Research</div>
+            <div class="exp-company">Prof. Sidharth — Plaksha University</div>
+          </div>
+          <div class="exp-date">Jan 2026 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed a 3-class object detection system using YOLOv11 and RT-DETR to eliminate cultural edge-case misclassifications in traffic surveillance.</li>
+          <li>Automated dataset labeling with Vicuna VLM and optimized class imbalances, achieving real-time edge deployment at &gt;30 FPS.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card glass-card pink reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Science on Wheels Project</div>
+            <div class="exp-company">Prof. Shashank Tamaskar &amp; Prof. Rucha</div>
+          </div>
+          <div class="exp-date">Sep 2025 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Spearheaded daily content delivery for project social handles, maintaining active online presence.</li>
+          <li>Designed and published visual assets, event collages, and multimedia updates to document milestones.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card glass-card reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Sailboat Aerodynamics Project</div>
+            <div class="exp-company">Prof. Andy D. Ruina — Plaksha University</div>
+          </div>
+          <div class="exp-date">Sep 2024 – Feb 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Worked as protégé to set up artificial wind environments to simulate real-world conditions for aerodynamic testing.</li>
+          <li>Perfected and finalized a functioning sailboat model through rigorous testing, iteration, and design optimization.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Entrepreneurship -->
+    <div class="tab-panel" id="tab-entrepreneurship">
+      <div class="exp-card glass-card pink reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Co-Founder</div>
+            <div class="exp-company">Nexus — Software Products Marketplace</div>
+          </div>
+          <div class="exp-date">Dec 2025 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Building a Marketplace for Software Products, currently in Pilot Testing.</li>
+          <li>Registered member of D2C Chandigarh Startup Group.</li>
+          <li>Appreciated by founders at the Entrepreneurship Challenge Cup hosted at Plaksha University.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card glass-card cyan reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">OC Member — Organising Committee</div>
+            <div class="exp-company">Young Creators League (YCL)</div>
+          </div>
+          <div class="exp-date">2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed presentation materials and content to support event execution and participant engagement.</li>
+          <li>Played an active role in organizing the YCL event at Plaksha University, coordinating logistics and on-ground operations.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ASCII Art — Circuit -->
+<div class="ascii-section">
+  <pre class="ascii-art-block" aria-hidden="true">    ┌──[ML]──┐        ┌──[CV]──┐        ┌──[LLM]──┐
+    │ ●●●●●  │───────│ ●●●●●  │───────│  ●●●●●  │
+    └────────┘        └────────┘        └─────────┘
+         │                 │                  │
+    ┌────▼─────────────────▼──────────────────▼────┐
+    │           AGENTIC AI PIPELINE                │
+    └──────────────────────────────────────────────┘</pre>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════════════════════════ -->
+<div class="neon-divider"></div>
+<section id="projects">
+  <div class="section-container">
+    <h2 class="section-title reveal">PROJECTS</h2>
+    <p class="section-subtitle reveal">// ls -la ~/projects</p>
+
+    <div class="projects-grid">
+
+      <!-- IVT -->
+      <div class="project-card glass-card reveal">
+        <div class="project-tag">Research · Computer Vision</div>
+        <h3 class="project-title">IVT Surgical Triplet Recognition</h3>
+        <p class="project-desc">
+          A 15-class surgical action triplet recognition system for robotic surgery,
+          combining YOLO-to-MedSAM-2 pipeline with Gaussian-guided spatial attention.
+          Harmonizes diverse surgical datasets via dynamic prompt jittering.
+        </p>
+        <div class="project-metrics">
+          <span class="metric">+7.9% Instrument mAP</span>
+          <span class="metric">+21.5% Triplet mAP</span>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">YOLOv11</span>
+          <span class="stack-tag">MedSAM-2</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">CVAT</span>
+        </div>
+      </div>
+
+      <!-- CADSIT -->
+      <div class="project-card glass-card reveal">
+        <div class="project-tag cyan">Research · Edge AI</div>
+        <h3 class="project-title">CADSIT Headgear Detection System</h3>
+        <p class="project-desc">
+          A traffic surveillance system using YOLOv11 + RT-DETR to detect
+          helmet compliance with cultural edge-case awareness. Uses Vicuna VLM
+          for automated dataset labeling.
+        </p>
+        <div class="project-metrics">
+          <span class="metric">&gt;30 FPS Edge Deployment</span>
+          <span class="metric">3-class Detection</span>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">YOLOv11</span>
+          <span class="stack-tag">RT-DETR</span>
+          <span class="stack-tag">Vicuna VLM</span>
+          <span class="stack-tag">Auto Distill</span>
+        </div>
+      </div>
+
+      <!-- Agentic AI Models -->
+      <div class="project-card glass-card reveal">
+        <div class="project-tag pink">ML · Agentic AI</div>
+        <h3 class="project-title">Agentic AI Pipelines @ Whilter AI</h3>
+        <p class="project-desc">
+          Designed and trained agentic AI models with full hyperparameter optimization
+          using GridSearchCV. Built scalable data pipelines for complex information
+          processing in production environments.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">CrewAI</span>
+          <span class="stack-tag">LLMs</span>
+          <span class="stack-tag">Scikit-learn</span>
+          <span class="stack-tag">Flask</span>
+          <span class="stack-tag">AWS</span>
+        </div>
+      </div>
+
+      <!-- Sailboat -->
+      <div class="project-card glass-card reveal">
+        <div class="project-tag">Engineering · Physics</div>
+        <h3 class="project-title">Sailboat Aerodynamics Model</h3>
+        <p class="project-desc">
+          Engineered artificial wind environments for aerodynamic testing under
+          Prof. Andy D. Ruina. Iterated and finalized a fully functional sailboat
+          model through rigorous design optimization cycles.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Aerodynamics</span>
+          <span class="stack-tag">Physical Prototyping</span>
+          <span class="stack-tag">CFD Concepts</span>
+        </div>
+      </div>
+
+      <!-- Nexus -->
+      <div class="project-card glass-card reveal">
+        <div class="project-tag cyan">Entrepreneurship · Product</div>
+        <h3 class="project-title">Nexus — Software Marketplace</h3>
+        <p class="project-desc">
+          Co-founded and building a marketplace for software products. Currently
+          in Pilot Testing. Member of D2C Chandigarh Startup Group, recognized
+          at the Entrepreneurship Challenge Cup at Plaksha University.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Product Dev</span>
+          <span class="stack-tag">Flask</span>
+          <span class="stack-tag">AWS</span>
+          <span class="stack-tag">Nginx</span>
+          <span class="stack-tag">Startup</span>
+        </div>
+      </div>
+
+      <!-- Science on Wheels -->
+      <div class="project-card glass-card reveal">
+        <div class="project-tag pink">Social Impact · Content</div>
+        <h3 class="project-title">Science on Wheels</h3>
+        <p class="project-desc">
+          Led social media management and content creation for a science outreach
+          initiative. Spearheaded daily content delivery, event collages, and
+          multimedia documentation for community engagement.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Content Strategy</span>
+          <span class="stack-tag">Graphic Design</span>
+          <span class="stack-tag">Social Media</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CURRENTLY WORKING ON
+══════════════════════════════════════════════════════════ -->
+<div class="neon-divider"></div>
+<section id="working-on">
+  <div class="section-container">
+    <h2 class="section-title reveal">CURRENTLY WORKING ON</h2>
+    <p class="section-subtitle reveal">// ps aux | grep sukrit</p>
+
+    <div class="working-grid">
+
+      <div class="working-card reveal">
+        <div class="working-status">
+          <div class="status-dot"></div>
+          ACTIVE · NITI AAYOG
+        </div>
+        <h3>National Incubator Framework</h3>
+        <p>
+          Developing the National Incubator Assessment Framework in collaboration
+          with DST, DBT, DPIIT, MEITY, and the World Bank for Atal Innovation
+          Mission 2.0. Shaping India's startup ecosystem policy from the ground up.
+        </p>
+      </div>
+
+      <div class="working-card reveal">
+        <div class="working-status">
+          <div class="status-dot"></div>
+          ACTIVE · STARTUP
+        </div>
+        <h3>Nexus Marketplace — Pilot</h3>
+        <p>
+          In active pilot testing for Nexus, a software products marketplace.
+          Iterating on product-market fit, onboarding early users, and refining
+          the core marketplace experience.
+        </p>
+      </div>
+
+      <div class="working-card reveal">
+        <div class="working-status">
+          <div class="status-dot"></div>
+          ACTIVE · RESEARCH
+        </div>
+        <h3>IVT Surgical Recognition System</h3>
+        <p>
+          Advancing the YOLO-to-MedSAM-2 pipeline with Prof. Sandeep Manjanna,
+          optimizing the Gaussian-guided attention mechanism for higher mAP
+          across diverse surgical datasets.
+        </p>
+      </div>
+
+      <div class="working-card reveal">
+        <div class="working-status">
+          <div class="status-dot"></div>
+          ACTIVE · RESEARCH
+        </div>
+        <h3>CADSIT Headgear Detection</h3>
+        <p>
+          Refining the edge-deployed headgear detection model with Prof. Sidharth,
+          improving robustness to cultural edge cases in Indian traffic scenarios
+          using RT-DETR + Vicuna VLM pipeline.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ASCII Art — Space -->
+<div class="ascii-section">
+  <pre class="ascii-art-block" aria-hidden="true">       *    .  *    .   *   .    *    .   *  .   *   .
+  .  *    .    *   .      *    .  *    .    *   .      *
+     .  *   .    .   *  .  .  *   .    .   *  .    *
+   *    .  *   .  *     .    .  *   .  *     .    .   *
+  .   *   .   .    *   .  *    .  *   .   *   .   .
+       *     *  .   *     .      *  .    *   .  *   .   *</pre>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ACHIEVEMENTS
+══════════════════════════════════════════════════════════ -->
+<div class="neon-divider"></div>
+<section id="achievements">
+  <div class="section-container">
+    <h2 class="section-title reveal">ACHIEVEMENTS</h2>
+    <p class="section-subtitle reveal">// cat achievements.log</p>
+
+    <div class="achievements-grid">
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">📄</div>
+        <div class="achievement-body">
+          <h4>Published Research — Springer</h4>
+          <p>Published a Scientific Journal Article on Agentic AI for Education in Springer × Plaksha 2025 edition.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-body">
+          <h4>Hackathon Finalist</h4>
+          <p>Finalist for FitoorXPrayas Hackathon and "How I Met My Investor" startup pitch competition.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">💻</div>
+        <div class="achievement-body">
+          <h4>College Finalist — SIH 2025</h4>
+          <p>Selected as college finalist for Smart India Hackathon 2025, one of India's largest hackathons.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">♟</div>
+        <div class="achievement-body">
+          <h4>5th Place — Intra Chess Tournament</h4>
+          <p>Secured 5th position at the Plaksha 2025 Intra Chess Tournament.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">🎓</div>
+        <div class="achievement-body">
+          <h4>Academic Excellence Award</h4>
+          <p>Awarded Academic Excellence for outstanding 12th grade performance (93.8% CBSE).</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">🎭</div>
+        <div class="achievement-body">
+          <h4>Multi-Club Core Member</h4>
+          <p>Core team: Athleda · MUN & Debating · Spotlight Theatre · Escape (Adventure Club).</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">🏛</div>
+        <div class="achievement-body">
+          <h4>Campus Ambassador</h4>
+          <p>Student Volunteer for campus tours on Founder's Day 2024 and Foundation Day 2025.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card glass-card reveal">
+        <div class="achievement-icon">🎬</div>
+        <div class="achievement-body">
+          <h4>Inaugural Theatre Performance</h4>
+          <p>Participated in the inaugural theatre performance for introducing club Spotlight at Plaksha University.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════ -->
+<div class="neon-divider"></div>
+<section id="contact">
+  <div class="section-container">
+    <h2 class="section-title reveal">CONTACT</h2>
+    <p class="section-subtitle reveal">// ping sukrit —— handshake initiated</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <h3>// Let's Connect</h3>
+        <p>
+          Open to research collaborations, internship opportunities, and interesting
+          conversations about AI, startups, and building impactful systems.
+          Drop a message — I usually respond within 24 hours.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:sukritsharma30@gmail.com" class="contact-link">
+            <span class="contact-link-icon">✉</span>
+            sukritsharma30@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/sukrit-sharma30" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-icon">🔗</span>
+            linkedin.com/in/sukrit-sharma30
+          </a>
+          <a href="https://github.com/sukrit37" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-icon">🐙</span>
+            github.com/sukrit37
+          </a>
+          <!-- Ko-fi button — add your username after ko-fi.com/  -->
+          <a href="https://ko-fi.com/YOUR_KOFI_USERNAME" target="_blank" rel="noopener" class="contact-link kofi-link" id="kofi-btn">
+            <span class="contact-link-icon">☕</span>
+            Buy me a coffee
+          </a>
+        </div>
+
+        <!-- ASCII art robot -->
+        <pre style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--neon-green); opacity: 0.5; margin-top: 2rem; line-height:1.2;" aria-hidden="true">
+    ╔══════════════╗
+    ║  STATUS: ON  ║
+    ║  ▓▓▓▓▓▓▓ 87% ║
+    ╚══════╤═══════╝
+         ┌─┴─┐
+       ┌─┤ ◉ ├─┐
+       │ └───┘ │
+       │  ═══  │
+       └───────┘
+    READY TO COLLAB</pre>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap reveal">
+        <div class="form-terminal-header">
+          <div class="terminal-dot dot-red"></div>
+          <div class="terminal-dot dot-yellow"></div>
+          <div class="terminal-dot dot-green"></div>
+          <span style="margin-left:0.5rem;">compose_message.sh</span>
+        </div>
+        <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">$ NAME</label>
+            <input type="text" id="name" name="name" placeholder="your_name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">$ EMAIL</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">$ SUBJECT</label>
+            <input type="text" id="subject" name="subject" placeholder="collaboration / opportunity / hello" />
+          </div>
+          <div class="form-group">
+            <label for="message">$ MESSAGE</label>
+            <textarea id="message" name="message" rows="5" placeholder="// write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-btn">
+            ⟶ SEND MESSAGE
+          </button>
+          <p id="form-status" style="font-family: var(--font-mono); font-size: 0.75rem; margin-top: 0.5rem; color: var(--neon-green); display: none;"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <pre style="font-family: var(--font-mono); font-size: 0.5rem; color: rgba(0,255,65,0.2); line-height:1.1; margin-bottom:1rem;" aria-hidden="true">
+  ╔═══════════════════════════════════════════════════════════════════╗
+  ║  EOF — END OF PORTFOLIO FILE                                      ║
+  ║  sukrit@plaksha:~$ exit                                           ║
+  ╚═══════════════════════════════════════════════════════════════════╝</pre>
+  <p>Built by <span>Sukrit Sharma</span> · <span>2026</span> · All systems nominal.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
