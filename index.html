@@ -9,7 +9,7 @@
   <meta property="og:description" content="ML Engineer · Entrepreneur · Researcher" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="pro-mode">
 
 <!-- ══════════════════════════════════════════════════════════
      NAVIGATION
@@ -24,8 +24,14 @@
     <li><a href="#achievements" class="nav-link">Achievements</a></li>
     <li><a href="#contact"    class="nav-link">Contact</a></li>
   </ul>
-  <div class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="theme-toggle" title="Switch theme mode">
+      <span id="theme-icon">⚡</span>
+      <span id="theme-label">CYBER</span>
+    </button>
+    <div class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
 
@@ -36,10 +42,12 @@
 <section id="hero">
   <canvas id="cyber-rain-canvas"></canvas>
   <div class="hero-overlay"></div>
+  <div class="hero-dot-matrix" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <!-- ASCII Laptop / Matrix Scene -->
-    <pre class="hero-ascii" aria-hidden="true">
+    <div class="hero-text-wrap">
+      <!-- ASCII Laptop / Matrix Scene (cyber mode only) -->
+      <pre class="hero-ascii" aria-hidden="true">
   ╔══════════════════════════════════════════════╗
   ║  01001000 01100101 01101100 01101100 01101111 ║
   ║  ┌─────────────────────────────────────────┐ ║
@@ -55,20 +63,23 @@
        ╲▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔╱
         ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔</pre>
 
-    <p class="hero-greeting">// Hello, World! I'm</p>
-    <h1 class="hero-name">
-      <span class="first">SUKRIT&nbsp;</span><span class="last">SHARMA</span>
-    </h1>
-    <p class="hero-tagline">
-      B.Tech CSAI @ <span class="highlight">Plaksha University</span>&nbsp;·&nbsp;
-      ML Engineer&nbsp;·&nbsp;
-      <span class="highlight">Entrepreneur</span>&nbsp;·&nbsp;
-      Researcher
-    </p>
-    <div class="hero-cta">
-      <a href="#projects"   class="btn btn-primary">  &gt; View Projects</a>
-      <a href="#contact"    class="btn btn-secondary">  &gt; Contact Me</a>
+      <p class="hero-greeting">// Hello, World! I'm</p>
+      <h1 class="hero-name">
+        <span class="first">SUKRIT&nbsp;</span><span class="last">SHARMA</span>
+      </h1>
+      <p class="hero-tagline">
+        B.Tech CSAI @ <span class="highlight">Plaksha University</span>&nbsp;·&nbsp;
+        ML Engineer&nbsp;·&nbsp;
+        <span class="highlight">Entrepreneur</span>&nbsp;·&nbsp;
+        Researcher
+      </p>
+      <div class="hero-cta">
+        <a href="#projects"   class="btn btn-primary">  &gt; View Projects</a>
+        <a href="#contact"    class="btn btn-secondary">  &gt; Contact Me</a>
+        <a href="DSML_Track_resume.pdf" class="btn btn-resume" download="Sukrit_Sharma_DSML_Resume.pdf">&#8595; Resume</a>
+      </div>
     </div>
+    <img src="sukrit.jpg" class="hero-photo" alt="Sukrit Sharma" />
   </div>
 
   <div class="scroll-indicator">
@@ -121,6 +132,7 @@
 
       <!-- Bio + Skills -->
       <div class="about-bio reveal">
+        <img src="sukrit.jpg" class="profile-photo-about" alt="Sukrit Sharma" />
         <h3>// Building at the Intersection of AI &amp; Impact</h3>
         <p>
           I'm a second-year CS+AI student at Plaksha University, passionate about building
@@ -719,6 +731,9 @@
           <span style="margin-left:0.5rem;">compose_message.sh</span>
         </div>
         <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <!-- FormSubmit.co — real email delivery to sukritsharma30@gmail.com -->
+          <input type="hidden" name="_subject" value="Portfolio Contact — New Message" />
+          <input type="hidden" name="_captcha" value="false" />
           <div class="form-group">
             <label for="name">$ NAME</label>
             <input type="text" id="name" name="name" placeholder="your_name" required />

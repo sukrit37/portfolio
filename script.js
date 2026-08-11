@@ -1,8 +1,42 @@
 /* =============================================================
    SUKRIT SHARMA — CYBER PORTFOLIO
-   JavaScript: Cyber Rain · Scroll Animations · Tab Switching
-   · Typewriter Effect · Nav Behavior
+   JavaScript: Theme Toggle · Cyber Rain · Scroll Animations
+   · Tab Switching · Typewriter · Nav Behavior
    ============================================================= */
+
+/* ── 0. THEME TOGGLE ─────────────────────────────────────────── */
+(function initTheme() {
+  const body   = document.body;
+  const btn    = document.getElementById('theme-toggle');
+  const icon   = document.getElementById('theme-icon');
+  const label  = document.getElementById('theme-label');
+  if (!btn) return;
+
+  const saved = localStorage.getItem('portfolio-theme') || 'pro';
+
+  function applyTheme(theme) {
+    if (theme === 'cyber') {
+      body.classList.remove('pro-mode');
+      body.classList.add('cyber-mode');
+      icon.textContent  = '☀️';
+      label.textContent = 'CLEAN';
+    } else {
+      body.classList.add('pro-mode');
+      body.classList.remove('cyber-mode');
+      icon.textContent  = '⚡';
+      label.textContent = 'CYBER';
+    }
+    localStorage.setItem('portfolio-theme', theme);
+  }
+
+  applyTheme(saved);
+
+  btn.addEventListener('click', () => {
+    const current = body.classList.contains('pro-mode') ? 'pro' : 'cyber';
+    applyTheme(current === 'pro' ? 'cyber' : 'pro');
+  });
+})();
+
 
 /* ── 1. CYBER RAIN (Matrix) ─────────────────────────────────── */
 (function initCyberRain() {
@@ -226,7 +260,7 @@
 })();
 
 
-/* ── 6. CONTACT FORM ─────────────────────────────────────────── */
+/* ── 7. CONTACT FORM ────────────────────────────────────────── */
 function handleFormSubmit(event) {
   event.preventDefault();
   const btn    = document.getElementById('submit-btn');
@@ -235,33 +269,52 @@ function handleFormSubmit(event) {
 
   btn.disabled    = true;
   btn.textContent = '⟳ SENDING...';
+  status.style.display = 'none';
 
-  // Simulate sending (replace with actual backend/mailto)
-  setTimeout(() => {
+  const formData = new FormData(form);
+
+  fetch('https://formsubmit.co/ajax/sukritsharma30@gmail.com', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: formData
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.success === 'true' || data.success === true) {
+      status.style.display = 'block';
+      status.textContent   = '✓ Message sent! I\'ll get back to you within 24 hours.';
+      btn.textContent      = '✓ SENT';
+      btn.style.background = document.body.classList.contains('pro-mode') ? '#2563EB' : '#004d14';
+
+      setTimeout(() => {
+        form.reset();
+        status.style.display = 'none';
+        btn.textContent      = '⟶ SEND MESSAGE';
+        btn.style.background = '';
+        btn.disabled         = false;
+      }, 4000);
+    } else {
+      throw new Error('Send failed');
+    }
+  })
+  .catch(() => {
     status.style.display = 'block';
-    status.textContent   = '✓ Message sent! I\'ll get back to you soon.';
-    btn.textContent      = '✓ SENT';
-    btn.style.background = '#004d14';
-
-    // Reset after 4s
-    setTimeout(() => {
-      form.reset();
-      status.style.display = 'none';
-      btn.textContent      = '⟶ SEND MESSAGE';
-      btn.style.background = '';
-      btn.disabled         = false;
-    }, 4000);
-  }, 1200);
+    status.textContent   = '✗ Something went wrong. Email me directly at sukritsharma30@gmail.com';
+    status.style.color   = 'var(--neon-pink, #ff0080)';
+    btn.textContent      = '⟶ SEND MESSAGE';
+    btn.disabled         = false;
+  });
 }
 
 
-/* ── 7. CURSOR TRAIL EFFECT ──────────────────────────────────── */
+/* ── 8. CURSOR TRAIL EFFECT ──────────────────────────────────── */
 (function initCursorTrail() {
   const trail = [];
   const MAX   = 10;
 
   for (let i = 0; i < MAX; i++) {
     const dot = document.createElement('div');
+    dot.className = 'cursor-dot';
     dot.style.cssText = `
       position: fixed;
       pointer-events: none;
@@ -301,13 +354,13 @@ function handleFormSubmit(event) {
 })();
 
 
-/* ── 8. GLITCH EFFECT on hero name (subtle) ──────────────────── */
+/* ── 9. GLITCH EFFECT on hero name (cyber mode only) ───────── */
 (function initGlitch() {
   const name = document.querySelector('.hero-name');
   if (!name) return;
 
   setInterval(() => {
-    if (Math.random() < 0.08) { // 8% chance every interval
+    if (!document.body.classList.contains('pro-mode') && Math.random() < 0.08) {
       name.style.animation = 'glitch 0.15s steps(1) 1';
       setTimeout(() => { name.style.animation = ''; }, 200);
     }
