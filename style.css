@@ -1282,9 +1282,40 @@ body.pro-mode .nav-links {
 body.pro-mode .nav-toggle span { background: #0F172A; }
 
 body.pro-mode .theme-toggle {
-  border-color: #CBD5E1;
-  color: #64748B;
+  border-color: #2563EB;
+  color: #2563EB;
+  background: #EFF6FF;
   font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  animation: pro-nudge 2.5s infinite;
+  position: relative;
+}
+
+body.pro-mode .theme-toggle::after {
+  content: 'Try Cyber Mode! ✨';
+  position: absolute;
+  top: 135%;
+  right: 0;
+  background: #2563EB;
+  color: #ffffff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  animation: tooltip-nudge 6s ease-in-out infinite;
+}
+
+@keyframes pro-nudge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  50% { box-shadow: 0 0 12px 4px rgba(37, 99, 235, 0.2); }
+}
+
+@keyframes tooltip-nudge {
+  0%, 15%, 85%, 100% { opacity: 0; transform: translateY(5px); }
+  25%, 75% { opacity: 1; transform: translateY(0); }
 }
 
 body.pro-mode .theme-toggle:hover {
