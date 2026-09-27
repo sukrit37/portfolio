@@ -366,3 +366,72 @@ function handleFormSubmit(event) {
     }
   }, 3000);
 })();
+
+
+/* -- 10. RESUME REQUEST MODAL ---------------------------------- */
+function openResumeModal() {
+  const modal = document.getElementById('resume-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  // Reset form state
+  document.getElementById('resume-request-form').reset();
+  const status = document.getElementById('resume-form-status');
+  status.style.display = 'none';
+  const btn = document.getElementById('resume-submit-btn');
+  btn.textContent = '? SEND REQUEST';
+  btn.disabled = false;
+}
+
+function closeResumeModal() {
+  const modal = document.getElementById('resume-modal');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close on backdrop click
+document.getElementById('resume-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeResumeModal();
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeResumeModal();
+});
+
+function handleResumeRequest(event) {
+  event.preventDefault();
+  const btn    = document.getElementById('resume-submit-btn');
+  const status = document.getElementById('resume-form-status');
+  const form   = document.getElementById('resume-request-form');
+
+  btn.disabled    = true;
+  btn.textContent = '? SENDING...';
+  status.style.display = 'none';
+
+  const formData = new FormData(form);
+
+  fetch('https://formsubmit.co/ajax/sukritsharma30@gmail.com', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: formData
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.success === 'true' || data.success === true) {
+      status.style.display = 'block';
+      status.style.color   = 'var(--neon-green)';
+      status.textContent   = '? Request sent! Sukrit will reach out to you soon.';
+      btn.textContent      = '? REQUEST SENT';
+      setTimeout(() => { closeResumeModal(); }, 3000);
+    } else {
+      throw new Error('Failed');
+    }
+  })
+  .catch(() => {
+    status.style.display = 'block';
+    status.style.color   = 'var(--neon-pink, #ff0080)';
+    status.textContent   = '? Something went wrong. Email me at sukritsharma30@gmail.com';
+    btn.textContent      = '? SEND REQUEST';
+    btn.disabled         = false;
+  });
+}

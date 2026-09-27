@@ -91,7 +91,7 @@
       <div class="hero-cta">
         <a href="#projects"   class="btn btn-primary">  &gt; View Projects</a>
         <a href="#contact"    class="btn btn-secondary">  &gt; Contact Me</a>
-        <a href="Plaksha_Resume_Format_Resume_DSML.pdf" class="btn btn-resume" download="Sukrit_Sharma_Resume.pdf">&#8595; Resume</a>
+        <button class="btn btn-resume" id="resume-request-btn" onclick="openResumeModal()">&#128196; Request Resume</button>
       </div>
     </div>
     <img src="sukrit.jpg" class="hero-photo" alt="Sukrit Sharma" />
@@ -789,6 +789,41 @@
   <p>Built by <span>Sukrit Sharma</span> · <span>2026</span> · All systems nominal.</p>
 </footer>
 
+
+<!-- ══════════════════════════════════════════════════════════
+     RESUME REQUEST MODAL
+══════════════════════════════════════════════════════════ -->
+<div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none;">
+  <div class="modal-box glass-card">
+    <div class="form-terminal-header">
+      <div class="terminal-dot dot-red" onclick="closeResumeModal()" title="Close" style="cursor:pointer;"></div>
+      <div class="terminal-dot dot-yellow"></div>
+      <div class="terminal-dot dot-green"></div>
+      <span style="margin-left:0.5rem;">request_resume.sh</span>
+    </div>
+    <h3 id="modal-title" style="margin: 1.2rem 0 0.4rem; font-family: var(--font-mono); font-size: 1rem;">// Request My Resume</h3>
+    <p style="font-size: 0.82rem; opacity: 0.7; margin-bottom: 1.2rem;">I share my resume selectively. Fill in the details and I'll send it to you directly.</p>
+    <form id="resume-request-form" onsubmit="handleResumeRequest(event)">
+      <input type="hidden" name="_subject" value="Resume Request — Portfolio" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <div class="form-group">
+        <label for="r-name">$ NAME</label>
+        <input type="text" id="r-name" name="name" placeholder="your_name" required />
+      </div>
+      <div class="form-group">
+        <label for="r-email">$ EMAIL</label>
+        <input type="email" id="r-email" name="email" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="r-reason">$ PURPOSE</label>
+        <input type="text" id="r-reason" name="purpose" placeholder="e.g. internship / research / hiring" required />
+      </div>
+      <button type="submit" class="btn btn-primary" id="resume-submit-btn" style="width:100%;">⟶ SEND REQUEST</button>
+      <p id="resume-form-status" style="font-family: var(--font-mono); font-size: 0.75rem; margin-top: 0.6rem; display:none;"></p>
+    </form>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
